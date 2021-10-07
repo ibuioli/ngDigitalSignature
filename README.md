@@ -10,7 +10,7 @@ Install dependencies:
 npm i simple-drawing-board
 ```
 
-Move digital-signature folder to app folder in your Angular project. Import Digital Signature Module in modules when need the OL Maps:
+Move digital-signature folder to app folder in your Angular project. Import Digital Signature Module in modules when need the Digitan Signature:
 
 ```typescript
 import { DigitalSignatureModule } from './digital-signature/digital-signature.module';
