@@ -1,27 +1,42 @@
 # NgDigitalSignature
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+Module for integrate Digital Signature (simple-drawing-board) to Angular project with Components
 
-## Development server
+## How use it like Module in a Project?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install dependencies:
 
-## Code scaffolding
+```
+npm i simple-drawing-board
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Move digital-signature folder to app folder in your Angular project. Import Digital Signature Module in modules when need the OL Maps:
 
-## Build
+```typescript
+import { DigitalSignatureModule } from './digital-signature/digital-signature.module';
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Then set it:
 
-## Running unit tests
+```typescript
+imports: [
+    DigitalSignatureModule
+]
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Components
+### Component DigitalSignComponent Inputs
 
-## Running end-to-end tests
+* width: string (CSS data for width)
+* height: string (CSS data for height)
+* line: number (Line Weight)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Component DigitalSignComponent Output
 
-## Further help
+* eventDraw: Get coords while draw
+* eventDrawBegin: Get coords when start to draw
+* eventDrawEnd: Get coords when end to draw
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+Contact: ibuioli@gmail.com
+
