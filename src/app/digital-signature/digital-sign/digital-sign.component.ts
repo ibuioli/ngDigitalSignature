@@ -18,7 +18,6 @@ export class DigitalSignComponent implements OnInit, AfterViewInit, OnDestroy {
   @Output() eventDraw = new EventEmitter<any>();
   @Output() eventDrawBegin = new EventEmitter<any>();
   @Output() eventDrawEnd = new EventEmitter<any>();
-  @Output() eventSave = new EventEmitter<any>();
 
   sdb: any;
 
@@ -34,6 +33,12 @@ export class DigitalSignComponent implements OnInit, AfterViewInit, OnDestroy {
 
     if (this.eventDraw.observers.length > 0) {
       this.draw();
+    }
+    if (this.eventDrawBegin.observers.length > 0) {
+      this.drawBegin();
+    }
+    if (this.eventDrawEnd.observers.length > 0) {
+      this.drawEnd();
     }
   }
 
